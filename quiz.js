@@ -15,15 +15,15 @@ document.addEventListener('DOMContentLoaded', function() {
     function createFloatingElements() {
         const elements = ['✦', '✧', '•', '◦', '♔', '♕'];
         
-        for (let i = 0; i < 12; i++) {
+        for (let i = 0; i < 20; i++) {
             setTimeout(() => {
                 const element = document.createElement('div');
                 element.className = 'floating-element';
                 element.textContent = elements[Math.floor(Math.random() * elements.length)];
                 element.style.left = `${Math.random() * 100}%`;
                 element.style.top = `${Math.random() * 100}%`;
-                element.style.fontSize = `${Math.random() * 16 + 10}px`;
-                element.style.opacity = Math.random() * 0.3 + 0.1;
+                element.style.fontSize = `${Math.random() * 16 + 16}px`;
+                element.style.opacity = Math.random() * 1 + 1;
                 element.style.animation = `floatUp ${Math.random() * 20 + 10}s linear infinite ${Math.random() * 5}s`;
                 element.style.color = `rgba(255, 215, 0, ${Math.random() * 0.5 + 0.3})`;
                 floatContainer.appendChild(element);
