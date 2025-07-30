@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ ROYAL - Challenge</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-background"></div>
+    <div class="particles"></div>
+    
+    <div class="quiz-container">
+        <!-- Quiz Section (initially visible) -->
+        <div class="quiz-section">
+            <div class="quiz-header">
+                <div class="quiz-timer">
+                    <span class="timer-icon">⏱️</span>
+                    <span id="time">60</span>s
+                </div>
+                <div class="quiz-score">
+                    <span class="score-icon">🏆</span>
+                    <span id="score">0</span>/<span id="total-questions">10</span>
+                </div>
+            </div>
+            
+            <div class="quiz-progress">
+                <div class="progress-bar"></div>
+            </div>
+            
+            <div class="quiz-question-container">
+                <h2 id="question">Loading question...</h2>
+                <div class="options-container">
+                    <!-- Options will be inserted here by JavaScript -->
+                </div>
+            </div>
+            
+            <button id="next-btn" class="quiz-button" disabled>
+                <span class="btn-text">NEXT QUESTION</span>
+                <span class="gold-sparkle"></span>
+            </button>
+        </div>
+        
+        <!-- Results Section (initially hidden) -->
+        <div class="results-section" style="display: none;">
+            <div class="results-crown">👑</div>
+            <h2 class="results-title">Quiz Complete!</h2>
+            
+            <div class="results-stats">
+                <div class="stat-box correct-answers">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-value" id="correct-answers">0</div>
+                    <div class="stat-label">Correct Answers</div>
+                </div>
+                
+                <div class="stat-box percentage">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-value" id="percentage">0%</div>
+                    <div class="stat-label">Percentage</div>
+                </div>
+                
+                <div class="stat-box time">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-value" id="time-taken">60s</div>
+
+                </div>
+            </div>
+            
+            <div class="results-message" id="results-message"></div>
+            
+            <button id="restart-btn" class="quiz-button">
+                <span class="btn-text">TRY AGAIN</span>
+                <span class="gold-sparkle"></span>
+            </button>
+        </div>
+    </div>
+
+    <audio id="correct-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-correct-answer-tone-2870.mp3"></audio>
+    <audio id="wrong-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-wrong-answer-fail-notification-946.mp3"></audio>
+    <audio id="click-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3"></audio>
+    <audio id="complete-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-complete-2067.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
